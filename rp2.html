@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Harshath Raghava | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <style>
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    body {
+      font-family: 'Inter', sans-serif;
+      background: linear-gradient(120deg, #0f0c29, #302b63, #24243e);
+      color: #fff;
+      scroll-behavior: smooth;
+    }
+    nav {
+      display: flex; justify-content: space-between;
+      align-items: center; padding: 1rem 2rem;
+      background-color: #1f1c2c; position: sticky; top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: #fff; margin-left: 1rem; text-decoration: none; font-weight: bold;
+    }
+    nav a:hover { color: #a78bfa; }
+
+    section { padding: 4rem 2rem; text-align: center; }
+
+    .hero {
+      min-height: 100vh;
+      display: flex; align-items: center; justify-content: center;
+      flex-direction: column; position: relative;
+      background: linear-gradient(120deg, #1f1c2c, #928DAB);
+    }
+    .typed-text {
+      font-size: 2rem;
+      color: #e06262;
+      margin-top: 1rem;
+    }
+    .profile-pic {
+      position: absolute; top: 2rem; right: 2rem;
+      width: 150px; height: 150px; border-radius: 10px;
+      border: 2px solid #f0b45a; overflow: hidden;
+    }
+    .profile-pic img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .btn {
+      margin: 1rem 0.5rem; padding: 0.75rem 1.5rem;
+      border: none; border-radius: 5px;
+      background-color: #7f5af0; color: white;
+      cursor: pointer; text-decoration: none;
+      display: inline-block;
+    }
+    .btn.alt { background: transparent; border: 1px solid #7f5af0; }
+    .btn:hover { background-color: #a78bfa; }
+
+    .button-group {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 1rem; margin-top: 2rem;
+    }
+
+    .skill-grid, .project-grid, .ps-grid {
+      display: flex; overflow-x: auto; gap: 1rem;
+      padding: 1rem; scroll-snap-type: x mandatory;
+    }
+    .skill, .project, .ps-tile {
+      min-width: 250px; scroll-snap-align: start;
+      background: #252535; padding: 1rem;
+      border-radius: 8px; flex-shrink: 0;
+      display: flex; flex-direction: column; align-items: center;
+    }
+    .skill img, .ps-tile img { width: 40px; height: 40px; margin-bottom: 0.5rem; }
+    .skill span, .ps-tile span { font-size: 0.9rem; color: #ccc; }
+
+    .projects { background: #0f0c29; }
+    .project {
+      background: #1a1a2e; padding: 1rem;
+      border-radius: 10px; flex-shrink: 0;
+    }
+
+    .contact-form {
+      max-width: 500px; margin: 2rem auto;
+      display: flex; flex-direction: column; gap: 1rem;
+    }
+    .contact-info a { color: #a78bfa; text-decoration: none; }
+
+    .whatsapp-btn {
+      position: fixed; bottom: 20px; right: 20px;
+      background-color: #25D366; color: white;
+      padding: 10px 14px; border-radius: 50%;
+      font-size: 24px; z-index: 9999;
+    }
+
+    @media (max-width: 768px) {
+      .profile-pic { position: static; margin-bottom: 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div><strong>Harshath</strong></div>
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#problem-solving">Profiles</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div class="profile-pic">
+      <img src="pp.jpg" alt="Your Photo">
+    </div>
+    <h1>Hi, I’m <span>Harshath Raghava</span></h1>
+    <div class="typed-text" id="typed"></div>
+    <p><em>Curious tech learner always exploring the universe of code and innovation.</em></p>
+    <div class="button-group">
+      <a href="#projects" class="btn">View My Work</a>
+      <a href="#contact" class="btn alt">Contact Me</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>I’m a passionate B.Tech 3rd-year student majoring in AI & ML at Anil Neerukonda Institute of Technology. I love building web apps, exploring new technologies, and continuously learning.</p>
+    <ul style="list-style:none;">
+      <li>• Prompt Engineering Enthusiast</li>
+      <li>• Deployed Projects in PHP, React, Flask & Django</li>
+      <li>• Strong foundation in DBMS</li>
+      <li>• Fast Learner | Problem Solver | Team Player</li>
+      <li>• Good grip on latest AI Tools</li>
+    </ul>
+    <p>I've participated in ML/Web hackathons and coordinate GFG coding events. I'm also into <strong>street photography</strong> 📸 → <a href="https://drive.google.com/your-photography-link" style="color:#a78bfa;" target="_blank">Check my work</a></p>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"/><span>HTML</span></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"/><span>CSS</span></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"/><span>JavaScript</span></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg"/><span>PHP</span></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/><span>Python</span></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/><span>Java</span></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/><span>React</span></div>
+      <div class="skill"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"/><span>Cloud Basics</span></div>
+      
+    </div>
+  </section>
+
+  <section class="projects" id="projects">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project">
+        <h3>College Fest Website</h3>
+        <p>Frontend: HTML, CSS, JS | Backend: PHP</p>
+        <a href="#" style="color:#a78bfa;">Link Coming Soon</a>
+      </div>
+      <div class="project">
+        <h3>Weather Forecast App</h3>
+        <p>Node API with real-time weather info</p>
+        <a href="#">Link Coming Soon</a>
+      </div>
+      <div class="project">
+        <h3>Flask URL Shortener</h3>
+        <p>Flask-based custom link shortening tool</p>
+        <a href="#">Link Coming Soon</a>
+      </div>
+      <div class="project">
+        <h3>Hashtag & Quote Generator</h3>
+        <p>Photo + caption generator using Flask + ML</p>
+        <a href="#">Link Coming Soon</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="problem-solving">
+    <h2>Problem Solving Profiles</h2>
+    <div class="ps-grid">
+      <div class="ps-tile">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/19/LeetCode_logo_black.png"/>
+        <strong>LeetCode</strong>
+        <span><a href="https://leetcode.com/harshath_rk/" target="_blank">View Profile</a></span>
+      </div>
+      <div class="ps-tile">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/65/HackerRank_logo.png"/>
+        <strong>HackerRank</strong>
+        <span><a href="https://www.hackerrank.com/HarshathRaghava" target="_blank">View Profile</a></span>
+      </div>
+      <div class="ps-tile">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e8/HackerEarth_logo.png"/>
+        <strong>HackerEarth</strong>
+        <span><a href="https://www.hackerearth.com/@harshathraghava1812" target="_blank">View Profile</a></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <div class="contact-info">
+      <p>Email: <a href="mailto:harshathraghava5@gmail.com">harshathraghava5@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/harshath-raghava-13771b27b" target="_blank">harshath-raghava</a></p>
+      <p>WhatsApp: <a href="https://wa.me/919347329547" target="_blank">Chat on WhatsApp</a></p>
+    </div>
+  </section>
+
+  <a class="whatsapp-btn" href="https://wa.me/919347329547" target="_blank">
+    <i class="bi bi-whatsapp"></i>
+  </a>
+
+  <script>
+    var typed = new Typed("#typed", {
+      strings: ["Tech Explorer"],
+      typeSpeed: 50,
+      backSpeed: 30,
+      backDelay: 2000,
+      loop: true
+    });
+  </script>
+
+</body>
+</html>
